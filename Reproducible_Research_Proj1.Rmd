@@ -70,6 +70,8 @@ paste("Maximum interval mean steps =", avg_int_steps[which.max(avg_int_steps$ste
 
 ## Imputing missing values
 
+There are 2304 missing values for 8 days. These are replaced with corresponding interval mean values.
+
 ```{r}
 incomplete <- sum(!complete.cases(amd))
 
@@ -105,7 +107,6 @@ paste("Median of steps by Day =", median(daily_step_totals_i$steps))
 ```
 Activity monitoring data contains missing values for days for all intervals.
 These dates include 10/1/2012, 10/8/2012,11/1/2012,11/4/2012,11/09/2012, 11/10/2012, 11/14/2012 & 11/30/2012. When I replaces NAs with mean of corresponding interval, there is no change in mean and median for the imputed data. 
-
 
 
 ## Are there differences in activity patterns between weekdays and weekends?

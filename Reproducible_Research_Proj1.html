@@ -157,6 +157,7 @@ plot(steps ~ interval, data=avg_int_steps,type=&quot;l&quot;,
 </div>
 <div id="imputing-missing-values" class="section level2">
 <h2>Imputing missing values</h2>
+<p>There are 2304 missing values for 8 days. These are replaced with corresponding interval mean values.</p>
 <pre class="r"><code>incomplete &lt;- sum(!complete.cases(amd))
 
 imputed_amd &lt;- transform(amd,steps = ifelse(is.na(amd$steps),
